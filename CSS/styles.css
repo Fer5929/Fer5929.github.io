@@ -3,8 +3,7 @@ html{
     box-sizing: border-box;
     scroll-snap-type: y mandatory;
     background-color: rgb(255, 182, 193);
-    font-family: 'Advent Pro', sans-serif;
-font-family: 'Fasthand', cursive;   
+    font-family: 'Raleway', sans-serif;
 }
 *, *:before, *:after {
     box-sizing: inherit;
