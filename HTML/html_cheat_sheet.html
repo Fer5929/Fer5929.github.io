@@ -109,6 +109,142 @@
     <header><b> Ejemplo de header</b> </header>
 </fieldset>
 <!--FS section-->
-
+<fieldset>
+    <h2>section</h2>
+    <p>Define un contenido determinado con sus correspondientes etiquetas.</p>
+    <section class="Section_1">
+        <h4>Sección 1</h4>
+        <p>aquí se define una sección.</p>
+    </section>
+    <section class="Section_2">
+        <h4>Sección 2</h4>
+        <p>aquí se define una sección diferente.</p>
+    </section>
+</fieldset>
+<!--FS article-->
+<fieldset>
+    <h2>article</h2>
+    <p>Contenedor el cual engloba que se consideran independientes del sitio web. </p>
+    <article>
+        <h1>Encabezado</h1>
+        <h2>La historia de Google</h2>
+        <p>Google fue fundado en 1998...</p>
+        <p>Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Velit natus alias, 
+            expedita, ducimus dolores deleniti minus 
+            provident ipsa ut obcaecati voluptatem sunt 
+            maxime quae eveniet officiis. Quae porro facere iure.</p>
+    </article>
+</fieldset>
+<!--FS aside-->
+<fieldset>
+    <h2>aside</h2>
+    <p>Representa una sección de una página que consiste en contenido que está indirectamente relacionado con el contenido principal del documento. </p>
+    <aside class="aside_1">
+        Ejemplo:
+        <p>Información de tarea, glosario de html (se usó color para identificar visualmente este contendor.)</p>
+    </aside>
+</fieldset>
+<!--footer-->
+<fieldset>
+    <h2>footer</h2>
+    <p>Sección de contenido que se encuentra en la parte inferior de una página web, puede ser política de privacidad, logotipo, etc.</p>
+    <footer>
+        <span>Información obtenida de el siguiente <a href="https://www.w3schools.com/tags/ref_byfunc.asp">link</a></span> 
+    </footer>
+</fieldset>
+<!--FS nav-->
+<fieldset>
+    <h2>nav- navigation</h2>
+    <p>Muy comunmente usado en "menus de navegación", define un set de links de navegación.</p>
+    <div class="nav-bg">
+    <nav class="navegacion-principal contenedor">
+        <a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <polyline points="5 12 3 12 12 3 21 12 19 12" />
+            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+          </svg>
+        </a>
+        <a href="../HTML/aux.html">Página vacía</a>
+    </nav>
+    </div>
+</fieldset>
+<!--FS img-->
+<fieldset>
+    <h2>img- imagen</h2>
+    <p>Se usa para insertar una imagen en el documento.</p>
+    <img class="img_html"src="../HTML/Images_index/HTML_1.png" alt="HTML_1">
+</fieldset>
+<!--FS br-->
+<fieldset>
+    <h2>br- Salto de línea o <i>line break</i></h2>
+    <p>Se usa para poder dar un salto de línea sin cambiar de párrafo.</p>
+    <p>"Cuando despertó, el dinosaurio todavía estaba allí" <br>-Augusto Monterroso 1959</p>
+</fieldset>
+<!--FS hr-->
+<fieldset>
+    <h2>hr- Cambio de párrafo</h2>
+    <p>Sirve para cambiar de tema entre párrafos y se reprensenta con una línea horizontal.</p>
+    <h3>HTML</h3>
+    <p>HTML se refiere a <i>Hypertext markup language.</i></p>
+    <hr>
+    <h3>HTML y su relación con CSS</h3>
+    <p>CSS se usa para el diseño estético de html. </p>
+</fieldset>
+<!--FS form-->
+<fieldset>
+    <h2>form- formulario</h2>
+    <p>Se usa para crear un formulario que el usuario puede llenar.</p>
+    <form> 
+        <!--Se puede usar action para ponder el url a dónde va la info. -->
+        <label for="fname">Alumno:</label>
+        <input type="text" id="fname" name="fname" placeholder="nombre"><br><br>
+        <label for="lname">Matrícula:</label>
+        <input type="text" id="lname" name="lname" placeholder="A0xxxxxxx"><br><br>
+        <input type="submit" value="Enviar">
+      </form>
+</fieldset>
+<!--FS table-->
+<fieldset>
+    <h2>table- tabla</h2>
+    <p>Crea una tabla en el documento. <br>Una fila se define con la etiqueta "tr". 
+        <br>Se define una nueva celda con "th". <br> "tbody" agrupa todo en una tabla.</p>
+    <table border="">
+        <caption align="top">Alumnos</caption>
+            <tbody>
+            <tr>
+                <th>Matrícula</th>
+                <th>Nombre</th>
+                <th>Carrera</th>
+            </tr>
+            <tr>
+                <td>A0xxxxxxx</td>
+                <td>Nombre</td>
+                <td>ITC</td>
+            </tr>
+        </tbody>
+    </table>
+</fieldset>
+<!--FS ul-->
+<fieldset>
+    <h2>ul- Lista no ordenada</h2>
+    <p>Define una lista no ordenada. <br>la etiqueta "li" sirve para definir items en una lista. </p>
+    <ul class="ul_1">
+        <li>Alumno 1</li>
+        <li>Alumno 2</li>
+        <li>Alumno 3</li>
+      </ul>
+</fieldset>
+<!--FS lista ordenada-->
+<fieldset>
+    <h2>ol- Lista ordenada</h2>
+    <p>Define una lista ordenada.</p>
+    <ol>
+        <li>Alumno 1</li>
+        <li>Alumno 2</li>
+        <li>Alumno 3</li>
+    </ol>
+</fieldset>
 </body>
 </html>
