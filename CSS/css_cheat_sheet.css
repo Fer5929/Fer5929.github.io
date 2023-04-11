@@ -1,0 +1,177 @@
+html
+{
+    background-color: rgb(255, 182, 193);
+}
+body{
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    
+}
+div 
+{
+    border: 1px solid #7b7575;
+    padding: 15px;
+    margin: 20px 50px;
+    border-radius: 19px;
+    display: grid;
+}
+p.border_1
+{
+    margin: 2rem auto;
+    max-width: 40ch;
+    border: 8px solid #0038FF;
+    color: #000000; /*Aquí podría cambiar el color */
+    padding: 2ch; /*con el padding eligo que tanto alejo el boarder del texto*/
+    position: relative;
+    border-image: 
+      url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 0H8v4H4v4H0v8h4v4h4v4h8v-4h4v-4h4V8h-4V4h-4V0zm0 4v4h4v8h-4v4H8v-4H4V8h4V4h8z' fill='%230038FF'/%3E%3C/svg%3E")
+      8 stretch;
+}
+p.border_2
+{
+    margin: 2rem auto; /*sirve para centrar el texto en este caso*/
+    max-width: 40ch;
+    border: 3px solid #e333cc;
+    padding: 8ch;
+    
+}
+ul.ul_1
+{/*diseño de las bullets*/
+    list-style-type:circle;
+}
+.border_left
+{
+    border-left: 4mm ridge rgba(226, 119, 194, 0.6);
+    padding: 2ch
+}
+.border_right
+{
+    border-right: 4mm ridge rgba(226, 119, 194, 0.6);
+    padding: 2ch
+}
+.border_top
+{
+    border-top: 4mm ridge rgba(226, 119, 194, 0.6);
+    padding: 2ch
+}
+.border_bottom
+{
+    border-bottom: 4mm ridge rgba(226, 119, 194, 0.6);
+    padding: 2ch
+}
+.border_all
+{
+    border-left: 4mm ridge rgba(226, 119, 194, 0.6);
+    border-right: 4mm ridge rgba(226, 119, 194, 0.6);
+    border-top: 4mm ridge rgba(226, 119, 194, 0.6);
+    border-bottom: 4mm ridge rgba(226, 119, 194, 0.6);
+    padding: 2ch
+
+}
+.border_radius_1
+{
+    border: none;
+    border-radius: 10% 30% 50% 70%;
+    background-color: #e333cc;
+    margin: 2rem auto;
+    background-clip: padding-box;
+    
+}
+.border_radius_2
+{
+    border: dotted;
+    border-width: 10px 4px;
+    border-radius: 10px 40px;
+}
+
+div.back_img
+{
+    border: none;
+    background-image:url(/HTML/Images_index/CSS_2.png);
+    
+}
+div.back_clip_1
+{
+    font-weight: 300;
+    font-size: medium;
+    font:  bold 1.2em "Fira Sans", serif;
+    background-image: url(/HTML/Images_index/CSS_2.png);
+    background-clip: text;-webkit-background-clip: text;color: transparent;
+}
+p.color
+{
+    color:darkviolet
+}
+p.font_1
+{
+    font:  1.2em "Fira Sans", serif;
+}
+p.font_fam_1
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p.font_s_1
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font:bold
+}
+p.font_w_1
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+}
+p.w_h
+{
+    background-color: #e333cc;
+    width: 100px;
+    height: 110px;
+}
+ul.ul_2
+{
+    list-style-type: georgian;
+}
+.m_1
+{
+    margin: auto;
+    background-color: #7b7575;
+    border: none;
+}
+.m_2
+{
+    margin-left: auto;
+    background-color: cornflowerblue;
+    border: none;
+}
+div.pad_1
+{
+    border-style:dashed ;
+    padding: 3em 4em 3em;;
+}
+p.overflow_1
+{
+    width: auto;
+   height: 5em;
+   border: dotted;
+   overflow: auto;
+   justify-content: start;
+}
+div.disp_1
+{
+    display: inline;
+    background-color: #7b7575;
+}
+p.pos_stat
+{
+    position: static;
+}
+p.pos_fix
+{
+    margin-left: 200px;
+    position: absolute;
+    background-color: beige;
+}
+img.filtro
+{
+    width: 30%;
+    filter: hue-rotate(90deg);
+}
