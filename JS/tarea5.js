@@ -156,7 +156,20 @@ function busca_Palin(str) {
   str_volteado = str.toLowerCase().split("").reverse().join("");
   return str_volteado === str.toLowerCase();
 }
-
+// 11. Escribe una función que tome una lista de cadena de textos y devuelva una nueva lista con todas las cadenas en orden alfabético.
+function ordena_cadenas(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+        //compara dos cadenas a la vez
+      if (arr[j] < arr[i]) {
+        let temp = arr[i];//creación de variable temporal
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  return arr;
+}
 
 
   //--------- Pruebas en consola
@@ -182,3 +195,5 @@ function busca_Palin(str) {
   console.log(cadena_peque(["Helloo","World","!!"]));
   console.log("10. Escribe una función que revise si una cadena de texto es un palíndromo o no.")
   console.log(busca_Palin("Stanley Yelnats"));
+  console.log("11. Escribe una función que tome una lista de cadena de textos y devuelva una nueva lista con todas las cadenas en orden alfabético.");
+  console.log(ordena_cadenas(["Hola","Mundo","Amarillo","Abeja","Zapato","Sopa"]))
