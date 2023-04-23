@@ -86,17 +86,99 @@ function MCD(n1, n2) {
   }
   return n1;//MCD
 }
+// 6. Crea una función que cambie una cadena de texto a 'Hacker Speak'. Por ejemplo, para la cadena 'Javascript es divertido', su hacker speak es: 'J4v45c1pt 35 d1v3rt1d0'.
+function HS_transformer(str)
+{
+    let newstr=[];
+    let alfabeto = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWYZ ";
+    alfabeto = alfabeto.split("");
+    let hacker = "48cd3f6h1jk1mn0pqr57uvwxy248CD3F6H1JK1MN0PQR57UVWXY2";
+    hacker = hacker.split("");
+    str = str.split("");
+    for (let i = 0; i < str.length; i++) {
+        if(str[i]==" ")
+        {
+            newstr.push(str[i]);
+        }
+        else
+        {
+        let a = alfabeto.indexOf(str[i]);
+        newstr.push(hacker[a]);
+        }
+  }
+  return newstr.join("");
+}
+//7. Escribe una función que reciba un número, y regrese una lista con todos sus factores. Por ejemplo: factoriza(12) -> [1, 2, 3, 4, 6, 12].
+function factoriza(num)
+{
+    let temp=1; 
+    let factores=[];
+
+        for (let i=0; i<num; i++)
+        {
+            temp = num%i;
+            if(temp == 0)
+            {
+               factores.push(i);
+            }
+        }
+        factores.push(num);
+    
+    return factores;
+}
+// 8. Escribe una función que quite los elementos duplicados de un arreglo y regrese una lista con los elementos que quedan. Por ejemplo: quitaDuplicados([1, 0, 1, 1, 0, 0]) -> [1, 0]
+function quitaDuplicados(arr)
+{
+    let newarr=[];
+    for(let i=0; i<arr.length; i++)
+    {
+        if(newarr.indexOf(arr[i])==-1)
+        {
+            newarr.push(arr[i]);
+        }
+    }
+    return newarr;
+}
+// 9. Escribe una función que reciba como parámetro una lista de cadenas de texto, y regrese la longitud de la cadena más corta.
+function cadena_peque(arr)
+{
+    let lengths=[];//arreglo que guarda todas las longitudes de cada cadena
+    for(let i=0; i<arr.length;i++)
+    {
+        lengths.push(arr[i].length);
+    }
+    return(Math.min.apply(Math,lengths));
+    //se llama a "apply" para que el min pueda trabajar con el arreglo de lengths
+}
+// 10. Escribe una función que revise si una cadena de texto es un palíndromo o no.
+function busca_Palin(str) {
+  let str_volteado;
+  str_volteado = str.toLowerCase().split("").reverse().join("");
+  return str_volteado === str.toLowerCase();
+}
+
+
 
   //--------- Pruebas en consola
-  console.log("1. Escribe una función que encuentre el primer carácter de un cadena de texto que no se repite. Prueba tu función con: 'abacddbec' ")
+  console.log("1. Escribe una función que encuentre el primer carácter de un cadena de texto que no se repite. Prueba tu función con: 'abacddbec' ");
   console.log("Respuesta: " + noRepetido("abacddec")); 
-  console.log("2. Escribe una función que implemente el algoritmo 'bubble-sort' para ordenar una lista de números.")
-  console.log("Respuesta: "+BubbleSort([10,44,9,14,1,37]))
-  console.log("3. Escribe dos funciones: la primera que invierta un arreglo de números y regrese un nuevo arreglo con el resultado")
+  console.log("2. Escribe una función que implemente el algoritmo 'bubble-sort' para ordenar una lista de números.");
+  console.log("Respuesta: "+BubbleSort([10,44,9,14,1,37]));
+  console.log("3. Escribe dos funciones: la primera que invierta un arreglo de números y regrese un nuevo arreglo con el resultado");
   console.log(reversa([1, 2, 3, 4, 5]));
-  console.log("3.1 Funcion que modifique el arreglo del argumento")
+  console.log("3.1 Funcion que modifique el arreglo del argumento");
   console.log(modifica([1, 2, 3, 4, 5]));
-  console.log("Escribe una función que reciba una cadena de texto y regrese una nueva con la primer letra de cada palabra en mayúscula.")
+  console.log("4. Escribe una función que reciba una cadena de texto y regrese una nueva con la primer letra de cada palabra en mayúscula.");
   console.log(upCase("hello world from javascript"));
-  console.log("5. Escribe una función que calcule el máximo común divisor de dos números.")
+  console.log("5. Escribe una función que calcule el máximo común divisor de dos números.");
   console.log(MCD(48,96));
+  console.log("6. Crea una función que cambie una cadena de texto a 'Hacker Speak'. Por ejemplo, para la cadena 'Javascript es divertido', su hacker speak es: 'J4v45c1pt 35 d1v3rt1d0'.");
+  console.log(HS_transformer("JavaScript es divertido"));
+  console.log("7. Escribe una función que reciba un número, y regrese una lista con todos sus factores. Por ejemplo: factoriza(12) -> [1, 2, 3, 4, 6, 12].");
+  console.log(factoriza(12));
+  console.log("// 8. Escribe una función que quite los elementos duplicados de un arreglo y regrese una lista con los elementos que quedan. Por ejemplo: quitaDuplicados([1, 0, 1, 1, 0, 0]) -> [1, 0]");
+  console.log(quitaDuplicados ([1, 0, 1, 1, 0, 0]));
+  console.log("9. Escribe una función que reciba como parámetro una lista de cadenas de texto, y regrese la longitud de la cadena más corta.")
+  console.log(cadena_peque(["Helloo","World","!!"]));
+  console.log("10. Escribe una función que revise si una cadena de texto es un palíndromo o no.")
+  console.log(busca_Palin("Stanley Yelnats"));
