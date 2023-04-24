@@ -170,7 +170,33 @@ function ordena_cadenas(arr) {
   }
   return arr;
 }
-//12
+//12. Escribe una función que tome una lista de números y devuelva la mediana y la moda.
+function mediana_moda(arr)
+{
+    //obtención de la moda
+    //se llama a la función 13, que busca valores repetidos. 
+    let moda=rep(arr);
+    //cálculo de la mediana
+    //1. ordenar la lista uso de sort, o sino bubbleSort
+    let lista_ord = BubbleSort(arr);
+    //2. si es non regresar la mitad
+    if(lista_ord.length%2!=0)//impar
+    {
+        return("moda: "+moda+"\n"+"mediana: "+lista_ord[(lista_ord.length-1)/2]);
+    }
+    else
+    {
+        let mediana; 
+        let n1;
+        let n2;
+        n1=lista_ord[(lista_ord.length/2)-1];
+        n2=lista_ord[lista_ord.length/2];
+        mediana=(n1+n2)/2;
+        return ("moda: "+moda+"\n"+"mediana: "+mediana);
+    }
+}
+
+
 // 13. Escribe una función que tome una lista de cadenas de texto y devuelva la cadena más frecuente.
 function rep(arr)
 {
@@ -197,16 +223,17 @@ function rep(arr)
 //14
 //15 Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.
 function BubbleSortinversa(lista) {
+  //es nuestra función de BubbleSort pero volteada
   const longitud = lista.length;
   //ciclos for para recorrer mi arreglo y ordenarlo
   for (let i = 0; i < longitud - 1; i++) {
     for (let j = 0; j < longitud - i - 1; j++) {
       if (lista[j] < lista[j + 1]) {
-          //si es mayor el número de lado izq.
+          //si es menor el número de lado izq.
         const temp = lista[j]; // implementación de una variable temporal
         lista[j] = lista[j + 1];
         lista[j + 1] = temp;
-        //como el número de la izq. era mayor ahora igualamos lista [j] a ese valor y lista [j+1] guardará ahora el valor de temp. 
+        
       }
     }
   }
@@ -238,6 +265,8 @@ function BubbleSortinversa(lista) {
   console.log(busca_Palin("Stanley Yelnats"));
   console.log("11. Escribe una función que tome una lista de cadena de textos y devuelva una nueva lista con todas las cadenas en orden alfabético.");
   console.log(ordena_cadenas(["Hola","Mundo","Amarillo","Abeja","Zapato","Sopa"]))
+  console.log("12. Escribe una función que tome una lista de números y devuelva la mediana y la moda.")
+  console.log(mediana_moda([12,10,9,12,11,12,8,12,5,7,2,3]));
   console.log("13. Escribe una función que tome una lista de cadenas de texto y devuelva la cadena más frecuente.")
   console.log(rep(["hola","hola","casa","pato"]));
   console.log("15. Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.")
