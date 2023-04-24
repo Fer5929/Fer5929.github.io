@@ -1,0 +1,6 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+    background-color: rgb(255, 182, 193);
+}
