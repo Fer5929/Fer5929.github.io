@@ -170,7 +170,48 @@ function ordena_cadenas(arr) {
   }
   return arr;
 }
-
+//12
+// 13. Escribe una función que tome una lista de cadenas de texto y devuelva la cadena más frecuente.
+function rep(arr)
+{
+    const contador = {}; 
+    let repeticiones =[];
+    let index;
+    //ciclo for para encontrar las repeticiones de cada cadena
+    for (let c of arr) {
+      contador[c] = (contador[c] || 0) + 1;
+      repeticiones.push(contador [c]);
+    }
+    repeticiones.shift();//quitamos el primer elemenot
+    //en base a contador, buscar el valor máximo en la lista "repeticiones".
+    max=(Math.max.apply(Math,repeticiones));
+    for (let c of arr) 
+    {
+        //recorrer contador y hallar el valor máximo "max"
+      if (contador[c] === max)
+        {
+            return c;
+        }
+    }
+}
+//14
+//15 Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.
+function BubbleSortinversa(lista) {
+  const longitud = lista.length;
+  //ciclos for para recorrer mi arreglo y ordenarlo
+  for (let i = 0; i < longitud - 1; i++) {
+    for (let j = 0; j < longitud - i - 1; j++) {
+      if (lista[j] < lista[j + 1]) {
+          //si es mayor el número de lado izq.
+        const temp = lista[j]; // implementación de una variable temporal
+        lista[j] = lista[j + 1];
+        lista[j + 1] = temp;
+        //como el número de la izq. era mayor ahora igualamos lista [j] a ese valor y lista [j+1] guardará ahora el valor de temp. 
+      }
+    }
+  }
+  return lista;
+}
 
   //--------- Pruebas en consola
   console.log("1. Escribe una función que encuentre el primer carácter de un cadena de texto que no se repite. Prueba tu función con: 'abacddbec' ");
@@ -197,3 +238,7 @@ function ordena_cadenas(arr) {
   console.log(busca_Palin("Stanley Yelnats"));
   console.log("11. Escribe una función que tome una lista de cadena de textos y devuelva una nueva lista con todas las cadenas en orden alfabético.");
   console.log(ordena_cadenas(["Hola","Mundo","Amarillo","Abeja","Zapato","Sopa"]))
+  console.log("13. Escribe una función que tome una lista de cadenas de texto y devuelva la cadena más frecuente.")
+  console.log(rep(["hola","hola","casa","pato"]));
+  console.log("15. Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.")
+  console.log(BubbleSortinversa([1,5,2,10,7]));
