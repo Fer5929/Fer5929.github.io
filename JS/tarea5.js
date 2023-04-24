@@ -220,7 +220,13 @@ function rep(arr)
         }
     }
 }
-//14
+//14. Escribe una función que tome un número y devuelva verdadero si es una potencia de dos, falso de lo contrario.
+function pot_dos(num)
+{
+    return (Number.isInteger(Math.log2(num)));
+    //Number.isInteger regresa si es entero o no
+    //Math.log2 obtiene el logaritmo de dos
+}
 //15 Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.
 function BubbleSortinversa(lista) {
   //es nuestra función de BubbleSort pero volteada
@@ -269,5 +275,7 @@ function BubbleSortinversa(lista) {
   console.log(mediana_moda([12,10,9,12,11,12,8,12,5,7,2,3]));
   console.log("13. Escribe una función que tome una lista de cadenas de texto y devuelva la cadena más frecuente.")
   console.log(rep(["hola","hola","casa","pato"]));
+  console.log("14. Escribe una función que tome un número y devuelva verdadero si es una potencia de dos, falso de lo contrario.")
+  console.log(pot_dos(83));
   console.log("15. Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.")
   console.log(BubbleSortinversa([1,5,2,10,7]));
