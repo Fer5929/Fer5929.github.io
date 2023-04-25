@@ -248,7 +248,7 @@ function BubbleSortinversa(lista) {
 
   //--------- Pruebas en consola
   console.log("1. Escribe una función que encuentre el primer carácter de un cadena de texto que no se repite. Prueba tu función con: 'abacddbec' ");
-  console.log("Respuesta: " + noRepetido("abacddec")); 
+  console.log("Respuesta: " + noRepetido("abacddbec")); 
   console.log("2. Escribe una función que implemente el algoritmo 'bubble-sort' para ordenar una lista de números.");
   console.log("Respuesta: "+BubbleSort([10,44,9,14,1,37]));
   console.log("3. Escribe dos funciones: la primera que invierta un arreglo de números y regrese un nuevo arreglo con el resultado");
