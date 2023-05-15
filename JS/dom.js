@@ -46,14 +46,7 @@ document.getElementById("btn-insert-r").addEventListener("click", () => {
   
 
  
-insertColumnButton.addEventListener("click", function() {
-  const rows = table.rows;
 
-  for (let i = 0; i < rows.length; i++) {
-    const newCell = rows[i].insertCell(); // Agrega una nueva celda a cada fila existente
-    newCell.textContent = "New Column";
-  }
-});
 
 
 const myTable = document.getElementById("myTable");
@@ -100,10 +93,11 @@ removeColorButton.addEventListener("click", function() {
 });
 
 function getRandomColor() {
-  const colors = ["Red", "Green", "White", "Black","Yellow","Pink","Blue","Orange ","Dark Grey","Grey","Fushia","Green Olive","Dark Blue","Purple","Lilac"];
+  const colors = ["Red", "Green", "White", "Black","Pink","Lavander","Purple","Orange","Green olive","Dark Grey","Greay","Lilac","Dark blue","Ocean blue","Magenta","Cyan","Bright Yellow","Yellow"];
   const randomIndex = Math.floor(Math.random() * colors.length);
   return colors[randomIndex];
 }
+
 
 
 const image = document.getElementById("imagenGato");
