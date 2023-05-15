@@ -30,15 +30,20 @@ const insertRowButton = document.getElementById("btn-insert-r");
 const insertColumnButton = document.getElementById("btn-insert-c");
 
 insertRowButton.addEventListener("click", function() {
-  const newRow = table.insertRow(); // Agrega una nueva fila al final de la tabla
+    const newRow = table.insertRow(); // Agrega una nueva fila al final de la tabla
+    const rows = table.rows;
+    const lastRowIndex = rows.length - 1;
+    //Q how to add new row cells after more columns are added?
+    //A: add a for loop to add cells to the new row
+    // https://stackoverflow.com/questions/2318555/add-cells-to-a-table-row-in-javascript
 
-  const cell1 = newRow.insertCell(); // Agrega una nueva celda a la nueva fila
-  cell1.textContent = "New Row column 1";
+    const cell1 = newRow.insertCell(); // Agrega una nueva celda a la nueva fila
+    cell1.textContent = "New Row column 1";
+  
+    const cell2 = newRow.insertCell(); // Agrega otra celda a la nueva fila
+    cell2.textContent = "New Row column 2";
 
-  const cell2 = newRow.insertCell(); // Agrega otra celda a la nueva fila
-  cell2.textContent = "New Row column 2";
-});
-
+  });
 insertColumnButton.addEventListener("click", function() {
   const rows = table.rows;
 
@@ -47,6 +52,7 @@ insertColumnButton.addEventListener("click", function() {
     newCell.textContent = "New Column";
   }
 });
+
 
 const myTable = document.getElementById("myTable");
 const rowIndexInput = document.getElementById("rowIndex");
@@ -92,7 +98,7 @@ removeColorButton.addEventListener("click", function() {
 });
 
 function getRandomColor() {
-  const colors = ["Red", "Green", "White", "Black"];
+  const colors = ["Red", "Green", "White", "Black","Yellow","Pink","Blue","Orange ","Dark Grey","Grey","Fushia","Green Olive","Dark Blue","Purple","Lilac"];
   const randomIndex = Math.floor(Math.random() * colors.length);
   return colors[randomIndex];
 }
