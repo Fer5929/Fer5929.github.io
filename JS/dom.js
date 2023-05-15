@@ -25,25 +25,27 @@ submitButton.addEventListener("click", function(event) {
 });
 
 
-const table = document.getElementById("sampleTable");
-const insertRowButton = document.getElementById("btn-insert-r");
-const insertColumnButton = document.getElementById("btn-insert-c");
-
-insertRowButton.addEventListener("click", function() {
-    const newRow = table.insertRow(); // Agrega una nueva fila al final de la tabla
-    const rows = table.rows;
-    const lastRowIndex = rows.length - 1;
-    //Q how to add new row cells after more columns are added?
-    //A: add a for loop to add cells to the new row
-    // https://stackoverflow.com/questions/2318555/add-cells-to-a-table-row-in-javascript
-
-    const cell1 = newRow.insertCell(); // Agrega una nueva celda a la nueva fila
-    cell1.textContent = "New Row column 1";
-  
-    const cell2 = newRow.insertCell(); // Agrega otra celda a la nueva fila
-    cell2.textContent = "New Row column 2";
-
+document.getElementById("btn-insert-r").addEventListener("click", () => {
+    const table = document.getElementById("sampleTable");
+    const row = table.insertRow(-1);
+    const colCount = table.rows[0].cells.length; // get the number of columns in the first row
+    for (let i = 0; i < colCount; i++) {
+      const cell = row.insertCell(i);
+      cell.innerHTML = "New row column " + (i + 1); // set the content of the cell
+    }
   });
+  
+  document.getElementById("btn-insert-c").addEventListener("click", () => {
+    const table = document.getElementById("sampleTable");
+    const rowCount = table.rows.length;
+    for (let i = 0; i < rowCount; i++) {
+      const cell = table.rows[i].insertCell(-1);
+      cell.innerHTML = "New column" ;
+    }
+  });
+  
+
+ 
 insertColumnButton.addEventListener("click", function() {
   const rows = table.rows;
 
